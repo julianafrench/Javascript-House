@@ -4,15 +4,23 @@
 <head>
     <meta charset="utf-8" />
     <title>Smoke</title>
-
+    <style>
+        input {
+            margin-left: 60px;
+        }
+        
+        #myCanvas { 
+            background-color: rgba(135, 206, 250, 0.2); }
+    </style>
 </head>
 
 <body style="font-family: arial">
 
     <canvas id="myCanvas" width="250" height="200"></canvas>
-    <br/>
+    
+    <br/><br/>
+    
     <input type="range" id="myRange" min="0" max="400" value="200" oninput="showVal(this.value)">
-
     <script>
         var speed = 200;
         var canvas = document.getElementById("myCanvas");
@@ -23,8 +31,6 @@
 
             speed = 400 - parseInt(val);
             interval = setInterval(animateSmoke, speed);
-
-            document.getElementById("demo").innerHTML = speed;
         };
 
         function drawSmoke1() {
@@ -88,7 +94,40 @@
             drawSmoke1();
             ctx.restore();
         };
+        
+         function drawSmoke4() {
+            ctx.save();
+            ctx.translate(190, 300);
+            ctx.scale(0.15, 0.15);
 
+            drawSmoke1();
+            ctx.restore();
+        };
+        
+        function drawSmoke5() {
+            ctx.save();
+            ctx.translate(0, 200);
+
+            drawSmoke2();
+            ctx.restore();
+        };
+        
+         function drawSmoke6() {
+            ctx.save();
+            ctx.translate(30, 150);
+
+            drawSmoke3();
+            ctx.restore();
+        };
+        
+         function drawSmoke7() {
+            ctx.save();
+            ctx.translate(40, 200);
+
+            drawSmoke4();
+            ctx.restore();
+        };
+                
         var a = 150;
         var b = 150;
 
@@ -104,6 +143,10 @@
             drawSmoke1();
             drawSmoke2();
             drawSmoke3();
+            drawSmoke4();
+            drawSmoke5();
+            drawSmoke6();
+            drawSmoke7();
             ctx.restore();
 
             x *= 1.1;
