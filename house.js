@@ -2,13 +2,13 @@ function drawGuides() {
     var ctx = document.getElementById("canvas").getContext("2d");
     
     // guide points
-    var yGd3 = 320;
+    var yGd3 = 370;
 
     // perspective line
     ctx.beginPath();
     ctx.moveTo(0, yGd3);
     ctx.lineTo(canvas.width, yGd3);
-    ctx.strokeStyle = "red";
+    ctx.strokeStyle = "black";
     ctx.stroke();
     ctx.closePath();   
 }
@@ -16,15 +16,28 @@ function drawGuides() {
 function drawRoof() {
     var ctx = document.getElementById("canvas").getContext("2d");
     
+    //front roof/wall
+    ctx.beginPath();
+    ctx.moveTo(41, 347);
+    ctx.lineTo(98, 270);
+    ctx.lineTo(163, 357);
+    ctx.fillStyle = "#E8E7C0";
+    ctx.fill();
+    ctx.closePath();
+    
     // right roof panel
     ctx.beginPath();
     ctx.moveTo(196, 276);
     ctx.lineTo(267, 348);
     ctx.lineTo(165, 365);
     ctx.lineTo(98, 269);
-    ctx.strokeStyle = "black";
-    ctx.stroke();
+    ctx.fillStyle = "#903A3B";
+    ctx.fill();
     ctx.closePath();
+}
+
+function drawWalls() {
+    var ctx = document.getElementById("canvas").getContext("2d");
     
     // left roof panel
     ctx.beginPath();
@@ -33,13 +46,9 @@ function drawRoof() {
     ctx.lineTo(196, 276);
     ctx.lineTo(98, 269);
     ctx.lineTo(30, 357);
-    
-    ctx.stroke();
+    ctx.fillStyle = "#903A3B";
+    ctx.fill();
     ctx.closePath();
-}
-
-function drawWalls() {
-    var ctx = document.getElementById("canvas").getContext("2d");
     
     // front wall
     ctx.beginPath();
@@ -48,8 +57,8 @@ function drawWalls() {
     ctx.lineTo(163, 460);
     ctx.lineTo(164, 357);
     ctx.lineTo(41, 347);
-    ctx.strokeStyle = "black";
-    ctx.stroke();
+    ctx.fillStyle = "#E8E7C0";
+    ctx.fill();
     ctx.closePath();
     
     // right side wall
@@ -58,8 +67,11 @@ function drawWalls() {
     ctx.lineTo(248, 346);
     ctx.lineTo(247, 432);
     ctx.lineTo(163, 460);
-    ctx.stroke();
+    ctx.fillStyle = "#E2E1B5";
+    ctx.fill();
     ctx.closePath();
+    
+    
 }
 function drawChimney() {
     var ctx = document.getElementById("canvas").getContext("2d");
@@ -71,7 +83,10 @@ function drawChimney() {
     ctx.lineTo(220, 255);
     ctx.lineTo(207, 255);
     ctx.lineTo(207, 310);
+    ctx.strokeStyle = "black";
     ctx.stroke();
+    ctx.fillStyle = "#E2E1B5";
+    ctx.fill();
     ctx.closePath();
     
     //front chimney wall
@@ -81,6 +96,8 @@ function drawChimney() {
     ctx.lineTo(187, 290);
     ctx.lineTo(207, 310);
     ctx.stroke();
+    ctx.fillStyle = "#E8E7C0";
+    ctx.fill();
     ctx.closePath();
 }
 
@@ -95,7 +112,7 @@ function drawWindows() {
 }
 
 function drawHouse() {
-    drawRoof();
     drawWalls();
+    drawRoof();
     drawChimney();
 }
