@@ -2,13 +2,7 @@ function drawGuides() {
     var ctx = document.getElementById("canvas").getContext("2d");
     
     // guide points
-    var xGd1 = 150;
-    var yGd1 = 100;
-    var yGd2 = 250;
-    
-    var xGd2 = 10;
-    var xGd3 = 290;
-    var yGd3 = 180;
+    var yGd3 = 320;
 
     // perspective line
     ctx.beginPath();
@@ -20,62 +14,61 @@ function drawGuides() {
     
     // left roof panel
     ctx.beginPath();
-    ctx.moveTo(30, 157);
-    ctx.lineTo(132, 144);
-    ctx.lineTo(196, 26);
-    ctx.lineTo(98, 19);
-    ctx.lineTo(30, 157);
+    ctx.moveTo(30, 357);
+    ctx.lineTo(132, 344);
+    ctx.lineTo(196, 276);
+    ctx.lineTo(98, 269);
+    ctx.lineTo(30, 357);
     ctx.strokeStyle = "black";
     ctx.stroke();
     ctx.closePath();
     
     // front wall
     ctx.beginPath();
-    ctx.moveTo(41, 147);
-    ctx.lineTo(43, 237);
-    ctx.lineTo(163, 260);
-    ctx.lineTo(164, 157);
-    ctx.lineTo(41, 147);
+    ctx.moveTo(41, 347);
+    ctx.lineTo(43, 437);
+    ctx.lineTo(163, 460);
+    ctx.lineTo(164, 357);
+    ctx.lineTo(41, 347);
     ctx.strokeStyle = "black";
     ctx.stroke();
     ctx.closePath();
     
     // right side wall
     ctx.beginPath();
-    ctx.moveTo(164, 157);
-    ctx.lineTo(248, 146);
-    ctx.lineTo(247, 232);
-    ctx.lineTo(163, 260);
+    ctx.moveTo(164, 357);
+    ctx.lineTo(248, 346);
+    ctx.lineTo(247, 432);
+    ctx.lineTo(163, 460);
     ctx.stroke();
     ctx.closePath();
     
     // right roof
     ctx.beginPath();
-    ctx.moveTo(98, 19);
-    ctx.lineTo(196, 26);
-    ctx.lineTo(267, 148);
-    ctx.lineTo(165, 165);
-    ctx.lineTo(98, 19);
+    ctx.moveTo(196, 276);
+    ctx.lineTo(267, 348);
+    ctx.lineTo(165, 365);
+    ctx.lineTo(98, 269);
     ctx.stroke();
     ctx.closePath();
     
     // right chimney wall
     ctx.beginPath();
-    ctx.moveTo(207, 90);
-    ctx.lineTo(220, 90);
-    ctx.lineTo(220, 15);
-    ctx.lineTo(207, 15);
-    ctx.lineTo(207, 90);
+    ctx.moveTo(207, 310);
+    ctx.lineTo(220, 310);
+    ctx.lineTo(220, 255);
+    ctx.lineTo(207, 255);
+    ctx.lineTo(207, 310);
     ctx.strokeStyle = "black";
     ctx.stroke();
     ctx.closePath();
     
     //front chimney wall
     ctx.beginPath();
-    ctx.moveTo(207, 15);
-    ctx.lineTo(187, 15);
-    ctx.lineTo(187, 60);
-    ctx.lineTo(207, 90);
+    ctx.moveTo(207, 255);
+    ctx.lineTo(187, 255);
+    ctx.lineTo(187, 290);
+    ctx.lineTo(207, 310);
     ctx.stroke();
     ctx.closePath();
 }
