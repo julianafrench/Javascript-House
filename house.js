@@ -1,4 +1,3 @@
-
 var drawHouse = function() {
     
     var ctx = document.getElementById("canvas2").getContext("2d");
