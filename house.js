@@ -101,8 +101,23 @@ var drawHouse = function() {
     }
 
     function drawDoor() {
-
+        ctx.beginPath();
+        ctx.moveTo(196, 383);
+        ctx.lineTo(196, 448);
+        ctx.lineTo(215, 441);
+        ctx.lineTo(216, 378);
+        ctx.lineTo(196, 383);
+        ctx.strokeStyle = "#98510d";
+        ctx.stroke();
+        ctx.fillStyle = "#de852b";
+        ctx.fill();
+        ctx.closePath();
     
+        ctx.beginPath();
+        ctx.arc(210, 412, 2, 0, Math.PI * 2, true);
+        ctx.fillStyle = "#98510d";
+        ctx.fill();
+        ctx.closePath();
     }
 
     function drawWindows() {
@@ -112,5 +127,6 @@ var drawHouse = function() {
     
     drawWalls();
     drawRoof();
-    drawChimney();  
+    drawChimney();
+    drawDoor();
 }
