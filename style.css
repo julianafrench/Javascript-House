@@ -1,8 +1,7 @@
 body {
-        width: 300;
-        height: 500;
-        background-color: aquamarine;
+        background-color: ghostwhite;
         font-family: corbel, sans-serif;
+        color: blueviolet;
 }
         
 canvas, input {
@@ -13,14 +12,26 @@ canvas, input {
     display: block;   
 }
 
+canvas {
+    background-color: aquamarine;
+}
+#canvas1 {
+    z-index: 1;
+}
+#canvas2 {
+    z-index: 0;
+}
 table { 
     margin-left: auto;
     margin-right: auto;
-    color: blueviolet;
+    text-align: center;
 }
 
 h1 {
     position: absolute;
     float: left;
-    color: white;
+}
+footer {
+    text-align: center;
+    font-size: .8em;
 }
