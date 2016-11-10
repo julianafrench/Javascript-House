@@ -10,52 +10,53 @@
 </head>
 
 <body onLoad="drawHouse(); drawSmokes()">
-    <h1>Our House</h1>
-    <canvas id="canvas1" width="300" height="200"></canvas>
-    <br/>
-    <canvas id="canvas2" width="300" height="250"></canvas>
-    <br/>
-    <input type="range" id="myRange" min="0" max="400" value="200" oninput="speedControl(this.value)">
-    <br/>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Student Number</th>
-            <th>Email</th>
-            <th>Set</th>
-            <th>Completed</th>
-            <th>Challenges</th>
-        </tr>
-        <tr>
-            <td>Ken Dao</td>
-            <td>A00993673</td>
-            <td>daohuukhanh@outlook.com</td>
-            <td rowspan="2">E</td>
-            <td>
-                <ul>
-                    <li>Smoke animation</li>
-                    <li>House windows</li>
-                </ul>
-            </td>
-            <td rowspan="2">
-                <ul>
-                    <li>Shading the house to look more 3D</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>Juliana French</td>
-            <td>A00998091</td>
-            <td>julianaefrench@gmail.com</td>
-            <td>
-                <ul>
-                    <li>House Frame</li>
-                    <li>Door</li>
-                    <li>This "readme" table</li>
-                </ul>
-            </td>
-        </tr>
+    <header>
+        <h1>Our House!</h1>
+    </header>
+    <div class="house">
+        <canvas id="canvas1" width="300" height="200"></canvas>
+        <canvas id="canvas2" width="300" height="300"></canvas>
+        <br/>
+        <input type="range" id="myRange" min="0" max="400" value="200" oninput="speedControl(this.value)">
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Completed</th>
+                <th>Challenges</th>
+            </tr>
+            <tr>
+                <td>Ken Dao</td>
+                <td>
+                    <ul>
+                        <li>Smoke animation</li>
+                        <li>House windows</li>
+                        <li>Grass and sun</li>
+                        <li>HTML semantics and CSS</li>
+                    </ul>
+                </td>
+                <td rowspan="2">None</td>
+            </tr>
+            <tr>
+                <td>Juliana French</td>
+                <td>
+                    <ul>
+                        <li>House Frame</li>
+                        <li>Door</li>
+                        <li>This "readme" table</li>
+                        <li>HTML semantics and CSS</li>
+                    </ul>
+                </td>
+            </tr>
     </table>
+    </div>
+    <footer>
+        <p>Made by:</p>
+        <p>Ken Dao A00993673; daohuukhanh@outlook.com</p>
+        <p>Juliana French A00998091; julianaefrench@gmail.com</p>
+        <p>Set E</p>
+    </footer>
 </body>
 
 </html>
