@@ -10,11 +10,17 @@ canvas, input {
     padding-right: 0;
     margin-left: auto;
     margin-right: auto;
-    display: block;
-    
+    display: block;   
+}
+
+table { 
+    margin-left: auto;
+    margin-right: auto;
+    color: blueviolet;
 }
 
 h1 {
-    padding-left: 10px;
-   float: left;
+    position: absolute;
+    float: left;
+    color: white;
 }
