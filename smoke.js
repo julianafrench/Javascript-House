@@ -15,7 +15,7 @@ var drawSmokes = function () {
 function drawSmoke1() {
     ctx.beginPath();
     ctx.arc(60, 50, 20, Math.PI, 2 * Math.PI);
-    ctx.strokeStyle = "white";
+    ctx.strokeStyle = "whitesmoke";
     ctx.stroke();
 
     ctx.arc(100, 50, 20, Math.PI, 2 * Math.PI);
