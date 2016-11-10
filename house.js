@@ -18,47 +18,39 @@ var drawHouse = function() {
     }
 
     function drawRoof() {
-
-        //front roof/wall
-        ctx.beginPath();
-        ctx.moveTo(41, 347);
-        ctx.lineTo(98, 270);
-        ctx.lineTo(163, 357);
-        ctx.fillStyle = "#E8E7C0";
-        ctx.fill();
-        ctx.closePath();
     
         // right roof panel
         ctx.beginPath();
         ctx.moveTo(196, 276);
         ctx.lineTo(267, 348);
-        ctx.lineTo(165, 365);
-        ctx.lineTo(98, 269);
+        ctx.lineTo(163, 365);
+        ctx.lineTo(93, 261);
         ctx.fillStyle = "#903A3B";
         ctx.fill();
         ctx.closePath();
-    }
-
-    function drawWalls() {
-    
-        // left roof panel
+        
+        //left roof panel & trim
         ctx.beginPath();
-        ctx.moveTo(30, 357);
-        ctx.lineTo(132, 344);
-        ctx.lineTo(196, 276);
+        ctx.moveTo(26, 357);
+        ctx.lineTo(23, 354);
+        ctx.lineTo(94, 261);
         ctx.lineTo(98, 269);
-        ctx.lineTo(30, 357);
+        ctx.lineTo(36, 357);
         ctx.fillStyle = "#903A3B";
         ctx.fill();
         ctx.closePath();
+        
+    }
     
+    function drawWalls() {
         // front wall
         ctx.beginPath();
-        ctx.moveTo(41, 347);
-        ctx.lineTo(43, 437);
-        ctx.lineTo(163, 460);
-        ctx.lineTo(164, 357);
-        ctx.lineTo(41, 347);
+        ctx.moveTo(164, 460);
+        ctx.lineTo(164, 366);
+        ctx.lineTo(98, 268);
+        ctx.lineTo(36, 355);
+        ctx.lineTo(38, 440);
+        ctx.lineTo(164, 460);
         ctx.fillStyle = "#E8E7C0";
         ctx.fill();
         ctx.closePath();
