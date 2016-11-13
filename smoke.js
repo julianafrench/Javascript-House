@@ -1,57 +1,50 @@
 var canvas;
 var ctx;
 var speed;
-var interval;
+var interval1;
+var interval2;
+var n = 1;
 
-var drawSmokes = function () {
-    speed = 200;
+function drawSmokes() {
+    setTimeout(function() {animateSmokes(); }, 1000);
+}
+
+var animateSmokes = function () {
+    speed = 700;
 
     canvas = document.getElementById("canvas1");
     ctx = canvas.getContext("2d");
 
-    interval = setInterval(animateSmoke, speed);
+    interval1 = setInterval(animateSmoke, speed);
+};
+
+var smokeColor = function () {
+    if (n % 3 == 1)
+        ctx.fillStyle = "whitesmoke";
+    else if (n % 3 == 2)
+        ctx.fillStyle = "rgba(255, 255, 255, 0.6)";
+        else
+            ctx.fillStyle = "rgba(255, 255, 255, 0.2)";
+   n++;
+        
 };
 
 function drawSmoke1() {
     ctx.beginPath();
     ctx.arc(60, 50, 20, Math.PI, 2 * Math.PI);
-    ctx.strokeStyle = "whitesmoke";
-    ctx.stroke();
-
     ctx.arc(100, 50, 20, Math.PI, 2 * Math.PI);
-    ctx.stroke();
-
     ctx.arc(140, 50, 20, Math.PI, 2 * Math.PI);
-    ctx.stroke();
-
     ctx.arc(160, 70, 20, 1.5 * Math.PI, 2 * Math.PI);
-    ctx.stroke();
-
     ctx.arc(180, 90, 20, 1.5 * Math.PI, 0.5 * Math.PI);
-    ctx.stroke();
-
     ctx.arc(160, 110, 20, 0, 0.5 * Math.PI);
-    ctx.stroke();
-
     ctx.arc(140, 130, 20, 0, Math.PI);
-    ctx.stroke();
-
     ctx.arc(100, 130, 20, 0, Math.PI);
-    ctx.stroke();
-
-
     ctx.arc(60, 130, 20, 0, Math.PI);
-    ctx.stroke();
-
     ctx.arc(40, 110, 20, 0.5 * Math.PI, Math.PI);
-    ctx.stroke();
-
     ctx.arc(20, 90, 15, 0.5 * Math.PI, 1.5 * Math.PI);
-    ctx.stroke();
-
     ctx.arc(40, 70, 20, Math.PI, 1.5 * Math.PI);
-    ctx.stroke();
-    ctx.fillStyle = "white";
+    smokeColor();
+    interval2 = setInterval(smokeColor, 1600);
     ctx.fill();
 };
 
@@ -146,9 +139,9 @@ var animateSmoke = function () {
 
 function speedControl(val) {
 
-    clearInterval(interval);
+    clearInterval(interval1);
 
-    speed = 400 - parseInt(val);
-    interval = setInterval(animateSmoke, speed);
+    speed = 1400 - parseInt(val);
+    interval1 = setInterval(animateSmoke, speed);
 
 };
